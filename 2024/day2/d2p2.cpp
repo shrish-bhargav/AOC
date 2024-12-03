@@ -21,7 +21,7 @@ bool differ(const vector<int> &num)
 
 int main()
 {
-    ifstream file("test.txt");
+    ifstream file("input.txt");
 
     if (!file.is_open())
     {
@@ -67,14 +67,12 @@ int main()
                 if (is_sorted(temp.begin(), temp.end()) && differ(temp))
                 {
                     count++;
-                    //cout << 1 << i << endl;
-                    continue;
+                    break;
                 }
                 else if (is_sorted(temp.rbegin(), temp.rend()) && differ(temp))
                 {
                     count++;
-                    //cout << 2 << i << endl;
-                    continue;
+                    break;
                 }
                 else
                 {
